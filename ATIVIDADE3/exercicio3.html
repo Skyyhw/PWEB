@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 - Testes Automatizados no Desenvolvimento Web</title>
+    <link rel="stylesheet" href="styleEx3.css">
+</head>
+<body>
+    <header class="header-1">
+        <nav class="nav">
+            <a href="#home" class="nav-Logo">Automação de Testes</a>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Início</a></li>
+                    <li class="nav-item"><a href="#introducao" class="nav-link">Introdução</a></li>
+                    <li class="nav-item"><a href="#ferramentas" class="nav-link">Ferramentas</a></li>
+                    <li class="nav-item"><a href="#analise" class="nav-link">Métricas</a></li>
+                    <li class="nav-item"><a href="#projetos" class="nav-link">Tabela & Gráficos</a></li>
+                    <li class="nav-item"><a href="#referencias" class="nav-link">Referências</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="home">
+        <div class="home-data">
+            <h1 class="home-title">Qualidade de <span class="home-title-color">Software Web</span></h1>
+            <p>Descubra a relevância das práticas de testes automatizados integradas às esteiras de DevOps modernas e a pipelines de CI/CD [2, 11].</p>
+            <a href="#introducao" class="button">Iniciar Leitura</a>
+        </div>
+        <div class="home-img">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Código no Computador">
+        </div>
+    </section>
+    <section id="introducao" class="about">
+        <h2 class="section-title">1. Introdução</h2>
+        <div class="about-container">
+            <h3 class="about-subtitle">Garantia de Qualidade e Redução de Custos</h3>
+            <p class="about-text">
+                Os testes de software são processos indispensáveis para garantir que uma aplicação atenda aos requisitos estabelecidos e funcione corretamente, contribuindo diretamente para a satisfação do cliente e para a reputação das organizações [2]. 
+                Em um cenário onde falhas podem custar bilhões de dólares anualmente — estima-se que erros de teste gerem US\$ 61 bilhões por ano globalmente —, a automação surge como uma solução para aumentar a confiabilidade e reduzir o tempo de reparo de bugs [2].
+            </p>
+            <br>
+            <p class="about-text">
+                Com o avanço do desenvolvimento ágil, as práticas evoluíram de testes manuais (realizados por humanos que seguem roteiros passo a passo) para as primeiras automações rudimentares por meio de scripts básicos [11]. 
+                Atualmente, a abordagem foca em testes contínuos integrados às esteiras de DevOps e pipelines de CI/CD (Integração e Entrega Contínuas) [11].
+            </p>
+        </div>
+    </section>
+    <section id="ferramentas" class="formation">
+        <h2 class="section-title">2. Ferramentas de Teste de Software</h2>
+        <div class="formation-container">
+            <h3>2.1. Testes no Front-End</h3>
+            <p>O front-end lida diretamente com o usuário final, de forma que a integridade visual e a usabilidade se tornam aspectos críticos [11]. Veja as ferramentas mais importantes para esta camada:</p>
+
+            <ol>
+                <li>
+                    <strong>Jest (Testes Unitários e de Integração):</strong> Framework de JavaScript mantido pelo Facebook, muito forte em ambientes Node.js e React [11]. 
+                    Destaca-se pela sua configuração simples, velocidade de execução e ferramentas nativas para isolar componentes (como mocks e spies) [12].
+                </li>
+                <li>
+                    <strong>Cypress (Testes End-to-End - E2E):</strong> Atua diretamente dentro do navegador do usuário, fornecendo maior controle e depuração [12]. 
+                    Oferece "viagem no tempo" (time travel) através de capturas visuais da tela em tempo real e esperas automáticas para os seletores [12].
+                </li>
+                <li>
+                    <strong>Playwright (Automação Multi-Browser):</strong> Desenvolvido pela Microsoft, permite rodar testes em múltiplos navegadores (Chromium, Firefox e WebKit) em paralelo através de um único processo [13]. 
+                    Suporta gravação de vídeos dos cenários e interações complexas de forma veloz [13].
+                </li>
+            </ol>
+
+            <h3>2.2. Testes no Back-End e APIs</h3>
+            <p>Garantir que os serviços de dados e servidores respondam de forma íntegra é fundamental para a saúde da aplicação [13]. A principal ferramenta avaliada é:</p>
+            <ol>
+                <li>
+                    <strong>Postman:</strong> A ferramenta mais popular para exploração, simulação e validação estrutural de APIs RESTful [14]. Permite configurar requisições HTTP e validar status de resposta usando variáveis de ambiente [14].
+                </li>
+                <li>
+                    <strong>Newman (CLI):</strong> Interface de linha de comando que executa as coleções do Postman diretamente dentro das esteiras de integração contínua (CI/CD), agilizando o feedback de erros para o time [14].
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="analise" class="skills">
+        <h2 class="section-title">3. Desempenho, Eficiência e Estratégia</h2>
+        <div class="skills-container">
+            <h3 class="skills-subtitle">Comparativo Prático: Cypress vs. Postman</h3>
+            <p class="skills-text">
+                Enquanto o Postman apresenta maior velocidade de resposta (com tempos médios excelentes variando entre 3,6 e 8,4 ms), o Cypress foca na profundidade de análise das interações das interfaces visuais [14, 15]. 
+                Com base nos experimentos apresentados no relatório, mapeamos os índices de detecção e cobertura [15]:
+            </p>
+
+            <div class="skills-data">
+                <span class="skills-names">Detecção de Defeitos (Cypress)</span>
+                <div class="skills-bar skills-html"></div>
+                <span class="skills-percentage">80%</span>
+            </div>
+
+            <div class="skills-data">
+                <span class="skills-names">Cobertura de Código (Cypress)</span>
+                <div class="skills-bar skills-css"></div>
+                <span class="skills-percentage">75%</span>
+            </div>
+
+            <div class="skills-data">
+                <span class="skills-names">Velocidade e Eficiência de Endpoint (Postman)</span>
+                <div class="skills-bar skills-js"></div>
+                <span class="skills-percentage">70%</span>
+            </div>
+
+            <h3>A Pirâmide de Testes Automatizados</h3>
+            <p class="skills-text">Uma implementação robusta e de baixo custo deve sempre guiar-se pela consagrada estrutura de pirâmide de testes [16]:</p>
+            
+            <dl>
+                <dt>Testes de Unidade (Base)</dt>
+                <dd>Formam a base sólida da pirâmide. São extremamente rápidos de executar, possuem menor custo de escrita e devem estar presentes em maior quantidade [16].</dd>
+                <dt>Testes de Integração (Meio)</dt>
+                <dd>Validam a interação e a comunicação entre os módulos individuais e as APIs de backend para manter a integridade dos dados [13, 16].</dd>
+                <dt>Testes End-to-End / E2E (Topo)</dt>
+                <dd>Simulam cenários reais do usuário de ponta a ponta na interface. Por serem lentos e complexos, ocupam o topo e devem existir em menor quantidade [16].</dd>
+            </dl>
+        </div>
+    </section>
+    <section id="projetos" class="projects">
+        <h2 class="section-title">4. Síntese Técnica das Ferramentas</h2>
+        <div class="projects-text">
+            <p>Escolher a ferramenta certa depende diretamente da camada do sistema que se deseja testar e do tempo de feedback necessário para a equipe [15].</p>
+        </div>
+
+        <div class="projects-container">
+            <div class="projects-img">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80" alt="Gráficos de análise e métricas">
+                <figcaption>O equilíbrio inteligente de testes otimiza a entrega do software e diminui os custos operacionais [16].</figcaption>
+            </div>
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>Ferramenta</th>
+                        <th>Camada</th>
+                        <th>Principal Diferencial</th>
+                        <th>Tempo Médio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jest</td>
+                        <td>Unitário / Integração</td>
+                        <td>Isolamento nativo por mocks e spies [12]</td>
+                        <td>Milisegundos [12]</td>
+                    </tr>
+                    <tr>
+                        <td>Cypress</td>
+                        <td>End-to-End (E2E)</td>
+                        <td>Execução interna e "viagem no tempo" [12]</td>
+                        <td>Segundos [16]</td>
+                    </tr>
+                    <tr>
+                        <td>Playwright</td>
+                        <td>Multi-Browser E2E</td>
+                        <td>Executa simultaneamente em Chromium, Firefox e WebKit [13]</td>
+                        <td>Segundos [13, 16]</td>
+                    </tr>
+                    <tr>
+                        <td>Postman</td>
+                        <td>Back-End & APIs</td>
+                        <td>Validação visual de requisições HTTP [14]</td>
+                        <td>3,6 a 8,4 ms [14]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section id="referencias" class="contact">
+        <h2 class="section-title">5. Conclusão & Referências</h2>
+        <div class="contact-container">
+            <p class="about-text" style="text-align: justify; margin-bottom: 25px;">
+                A implementação de testes automatizados com ferramentas de ponta é essencial para garantir rapidez e confiabilidade no desenvolvimento web [16]. 
+                Embora haja um esforço de aprendizado e configuração inicial, os benefícios a longo prazo, como a prevenção de falhas em produção e baixos custos de manutenção, justificam amplamente a adoção [16].
+            </p>
+            
+            <h3 style="text-align: left; margin-bottom: 10px; color: #cd1111;">Referências Bibliográficas:</h3>
+            <ul style="text-align: left; margin-bottom: 40px; padding-left: 20px; line-height: 1.8;">
+                <li>ADEDEJI, E. <strong>Choosing The Right Test Automation Tool for Company A</strong>. Trabalho de Conclusão de Curso (TI) - Metropolia University, 2025 [17].</li>
+                <li>COSTA, R. L. S. <strong>Um Guia para Testes de Software em Aplicações Front-End</strong>. Monografia - UFERSA, Mossoró, 2024 [17].</li>
+                <li>SANTOS, J. P. F. A Importância dos Testes Automatizados no Ciclo de Vida de um Software. <strong>RECA - Revista de Engenharia e Computação Aplicada</strong>, 2025 [18].</li>
+            </ul>
+
+            <p style="margin-bottom: 15px;"><strong>Links Úteis Acadêmicos:</strong></p>
+            <a href="https://github.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Link para o GitHub" width="40" height="40">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Link para o LinkedIn" width="40" height="40">
+            </a>
+        </div>
+    </section>
+    <footer>
+        <h2 id="footer-title">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</h2>
+        <p>Programação para Web | Atividade 2 - Automação de Testes | Quarto Semestre / 2026</p>
+    </footer>
+
+</body>
+</html>
